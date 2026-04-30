@@ -1,0 +1,89 @@
+/*todo: Variables*/
+:root {
+    /*? Variables CSS para la paleta de colores*/
+    --color-primario: #E64A19;
+    --color-secundario: #FF9800;
+    --color-fondo: #FFF3E0;
+    --color-texto: #3E2723;
+    --color-tarjeta: #f5ca5669;
+}
+
+/*todo: Selectores de etiqueta*/
+body {
+    /*? fuente*/
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: var(--color-fondo); /*? Usa variable inventada de color*/
+    color: var(--color-texto); /*? Usa variable inventada de color*/
+    max-width: 1000px; /*? Ancho*/
+    margin: 20px auto; /*? Centra el contenedor en la pantalla el margen pues*/
+    padding: 60px; /*? Espacio interno (Modelo de caja)*/
+    background-color: var(--color-tarjeta); /*? Usa variable inventada de color y es el fondo de la pagina*/
+    border-radius: 40px; /*? Bordes redondeados*/
+    box-shadow: 0 15px 35px rgb(0, 26, 255); /*? Sombra para efecto tarjeta*/
+    line-height: 1; /*? Interlineado (es decir el espacio entre líneas o renglones)*/
+}
+
+h1 {
+    color: var(--color-primario);
+    text-align: center; /*? Centra el texto*/
+    font-size: 3rem; /*? Tamaño de la fuente*/
+    font-weight: 400; /*? Grosor de fuente*/
+    margin-bottom: 30px; /*? Margen inferior*/
+    text-transform: uppercase; /*? ignora minusculas y las pasa mayúsculas*/
+    letter-spacing: 3px; /*? Espacio entre letras*/
+}
+
+h2 {
+    color: var(--color-secundario);
+    font-weight: 600;
+    border-bottom: 4px solid var(--color-primario); /*? barra de separación*/
+    padding-bottom: 10px;
+    margin-top: 40px;
+    display: block; /*? Adapta el tamaño de la caja al contenido del texto*/
+}
+
+img {
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*? Transición básica y simple*/
+    display: block; /*? Comportamiento de bloque para permitir el centrado*/
+    margin: 20px auto;
+    max-width: 100%; /*? Hace la imagen responsiva al ancho de su contenedor*/
+    width: auto; /*? Ancho automático para mantener la proporción*/
+    height: auto;
+    object-fit: cover; /*? Ajusta la imagen sin deformarla*/
+}
+
+/*todo: Selectores descendentes y de listas*/
+ul, ol {
+    padding-left: 40px; /*? Espacio interno izquierdo para la sangría*/
+}
+
+ul li {
+    list-style-type: '🌮 '; /*? icono de taco en cada inicio de renglon*/
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+li {
+    transition: background-color 0.7s ease, transform 0.7s ease; /*? agrega movimiento al pasar el mouse sobre li o la lista*/
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+/*todo: Pseudoclases y Pseudoelementos*/
+img:hover /* ? Pseudoclase para el efecto hover en la imagen se destaca solo por los dos puntos */ {
+    transform: scale(1.10); /*? Escala la imagen ligeramente cuando el cursor está sobre ella*/
+    box-shadow: 0 12px 20px rgba(0,0,0,0.80); /*? Aumenta un poco la sombra*/
+}
+
+li:hover {
+    background-color: #FFF8E1; /*? Cambia el color de fondo al pasar el cursor*/
+    color: var(--color-primario);
+    transform: translateX(5px); /*? Desplaza el texto ligeramente a la derecha cuando el cursor está sobre él*/
+}
+
+ol li::marker {
+    color: var(--color-primario); /*? Cambia el color solo a los números de la lista ordenada cuando el cursor está sobre ellos*/
+    font-weight: bold;
+}
