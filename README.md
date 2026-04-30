@@ -24,3 +24,6 @@ Texto con el proceso para realizar el platillo
 Recuerda subir tus cambios a github, usando git push
 
 ## No es necesario que crees una rama en esta ocasión trabaja sobre la rama principal de tu fork. 
+
+Proyecto: Receta de Tacos al Pastor
+Este proyecto es una práctica de desarrollo web enfocada en la maquetación estructurada con HTML y la estilización moderna con CSS.
